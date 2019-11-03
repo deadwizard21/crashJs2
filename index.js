@@ -163,15 +163,6 @@ circle.draw();
 
 
 
-/*        set: function(value){
-            if (!value.x || !value.y)
-                throw new Error('Invalid location.');
-
-            defaultLocation = value;
-            }
-*/
-
-
 
 
 
