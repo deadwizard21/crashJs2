@@ -129,12 +129,13 @@ const circle = new Circle(10);
 //getters and setters
 function Circle(radius){
     this.radius = radius;
+
     let defaultLocation = {x:0, y:0};
-        //this below has an inner function
-        //used to access a private property
+
     this.getDefaultLocation = function(){
         return defaultLocation;
     };
+    
     this.draw = function(){
         console.log('test');
     };
@@ -148,27 +149,27 @@ function Circle(radius){
         },
         set: function(value){
             if (!value.x || !value.y)
-                throw new Error('Invalid location.');
-
-            defaultLocation = value;
-            }
-
+                throw new Error('invalid location.');
+                
+                defaultLocation = value;
+            
+        }
     });
-
-
-
-
-
-
-};
+}
 
 const circle = new Circle(10);
-//circle.defaulLocation = 1;
+circle.defaultLocation = 1;
 circle.draw();
 
 
 
+/*        set: function(value){
+            if (!value.x || !value.y)
+                throw new Error('Invalid location.');
 
+            defaultLocation = value;
+            }
+*/
 
 
 
